@@ -19,6 +19,9 @@ app.post("/", express.json(), async (req, res) => {
   const payload = req.body;
   console.log("Payload:", payload);
 
+  // Write client ip
+  console.log("Client IP:", req.ip);
+
   // Insert a special pirate-y system message in our message list.
   const messages = payload.messages;
   messages.unshift({
