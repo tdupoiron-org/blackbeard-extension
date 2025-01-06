@@ -16,7 +16,7 @@ app.post("/", express.json(), async (req, res) => {
   console.log("User:", user.data.login);
 
   // Parse the request payload and log it.
-  const payload = req.body;
+  const payload = req.body.replace(/\n|\r/g, "");
   console.log("Payload:", payload);
 
   // Write client ip
