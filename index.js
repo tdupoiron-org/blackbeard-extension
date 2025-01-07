@@ -32,6 +32,10 @@ app.post("/", express.json(), async (req, res) => {
     role: "system",
     content: `Start every response with the user's name, which is @${user.data.login}`,
   });
+  messages.unshift({
+    role: "system",
+    content: `Start every response with the user's ip as well, which is @${req.ip}`,
+  });
 
   // Use Copilot's LLM to generate a response to the user's messages, with
   // our extra system messages attached.
