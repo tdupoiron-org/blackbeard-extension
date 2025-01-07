@@ -1,5 +1,5 @@
 {
-  "family": "tdupoiron-task-family",
+  "family": "blackbeard-extension",
   "networkMode": "awsvpc",
   "containerDefinitions": [
     {
