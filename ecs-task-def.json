@@ -17,7 +17,15 @@
           "containerPort": 3000,
           "hostPort": 3000
         }
-      ]
+      ],
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "/ecs/blackbeard-extension",
+          "awslogs-region": "eu-west-3",
+          "awslogs-stream-prefix": "blackbeard"
+        }
+      }
     }
   ],
   "requiresCompatibilities": [

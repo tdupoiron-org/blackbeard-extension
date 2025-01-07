@@ -31,3 +31,6 @@ jobs:
         context: .
         push: true
         tags: ghcr.io/${{ github.repository }}:latest
+  
+  deploy:
+    uses: ./.github/workflows/aws-deploy.yml
