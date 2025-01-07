@@ -3,8 +3,11 @@
   "networkMode": "awsvpc",
   "containerDefinitions": [
     {
-      "name": "tdupoiron-container",
+      "name": "blackbeard-extension",
       "image": "ghcr.io/tdupoiron-org/blackbeard-extension:latest",
+      "repositoryCredentials": {
+        "credentialsParameter": "arn:aws:secretsmanager:eu-west-3:066866130858:secret:tdupoiron-github-packages-read"
+      },
       "essential": true,
       "memory": 512,
       "cpu": 256,
