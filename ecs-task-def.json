@@ -1,0 +1,29 @@
+{
+  "family": "tdupoiron-task-family",
+  "networkMode": "awsvpc",
+  "containerDefinitions": [
+    {
+      "name": "tdupoiron-container",
+      "image": "ghcr.io/tdupoiron-org/blackbeard-extension:latest",
+      "essential": true,
+      "memory": 512,
+      "cpu": 256,
+      "portMappings": [
+        {
+          "containerPort": 3000,
+          "hostPort": 3000
+        }
+      ]
+    }
+  ],
+  "requiresCompatibilities": [
+    "FARGATE"
+  ],
+  "cpu": "256",
+  "memory": "512",
+  "networkConfiguration": {
+    "awsvpcConfiguration": {
+      "assignPublicIp": "ENABLED"
+    }
+  }
+}
