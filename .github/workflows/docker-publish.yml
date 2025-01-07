@@ -34,3 +34,4 @@ jobs:
   
   deploy:
     uses: ./.github/workflows/aws-deploy.yml
+    secrets: inherit
