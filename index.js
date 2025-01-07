@@ -17,7 +17,7 @@ app.post("/", express.json(), async (req, res) => {
 
   // Parse the request payload and log it.
   const payload = req.body;
-  console.log("Payload:", payload);
+  // console.log("Payload:", payload);
 
   // Write client ip
   console.log("Client IP:", req.ip);
@@ -31,10 +31,6 @@ app.post("/", express.json(), async (req, res) => {
   messages.unshift({
     role: "system",
     content: `Start every response with the user's name, which is @${user.data.login}`,
-  });
-  messages.unshift({
-    role: "system",
-    content: `Start every response with the user's ip as well, which is @${req.ip}`,
   });
 
   // Use Copilot's LLM to generate a response to the user's messages, with
