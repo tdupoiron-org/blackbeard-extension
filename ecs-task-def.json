@@ -7,7 +7,7 @@
       "name": "blackbeard-extension",
       "image": "ghcr.io/tdupoiron-org/blackbeard-extension:latest",
       "repositoryCredentials": {
-        "credentialsParameter": "arn:aws:secretsmanager:eu-west-3:066866130858:secret:tdupoiron-github-packages-read"
+        "credentialsParameter": "arn:aws:secretsmanager:eu-west-3:066866130858:secret:tdupoiron-github-pat-packages-read-mrs9pz"
       },
       "essential": true,
       "memory": 512,
