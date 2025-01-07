@@ -34,6 +34,6 @@ jobs:
       uses: aws-actions/amazon-ecs-deploy-task-definition@v1
       with:
         task-definition: ecs-task-def.json
-        service: tdupoiron-blackbeard-service
+        service: blackbeard-service
         cluster: tdupoiron-cluster
         wait-for-service-stability: true
