@@ -1,6 +1,7 @@
 {
   "family": "blackbeard-extension",
   "networkMode": "awsvpc",
+  "executionRoleArn": "arn:aws:iam::066866130858:role/ecsTaskExecutionRole",
   "containerDefinitions": [
     {
       "name": "blackbeard-extension",
